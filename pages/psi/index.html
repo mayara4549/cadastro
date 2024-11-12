@@ -1,0 +1,362 @@
+<html lang="pt-br"><head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Exército Brasileiro - Teste Psicotécnico para Registro CAC</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&amp;display=swap" rel="stylesheet">
+    <link href="css/all.min.css" rel="stylesheet">
+    <style>
+        body { font-family: 'Poppins', sans-serif; }
+        .radio-button:checked + label {
+            background-color: #166534;
+            color: white;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+        .checkbox-custom {
+            width: 20px;
+            height: 20px;
+            border: 2px solid #166534;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 8px;
+            flex-shrink: 0;
+        }
+        .checkbox-custom::after {
+            content: '';
+            width: 12px;
+            height: 12px;
+            background-color: #166534;
+            display: none;
+        }
+        .radio-button:checked + label .checkbox-custom::after {
+            display: block;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        .spinner {
+            animation: spin 1s linear infinite;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <div id="loading-screen" class="fixed inset-0 bg-green-900 flex flex-col items-center justify-center z-50">
+        <div class="text-white text-2xl mb-4">Iniciando Psicotécnico</div>
+        <div class="spinner text-white text-4xl">
+            <i class="fas fa-circle-notch"></i>
+        </div>
+    </div>
+
+    <header class="bg-white border-b border-gray-300">
+        <div class="container mx-auto px-4 py-2">
+            <div class="flex items-center">
+                <img alt="Brasão do Exército Brasileiro" class="mr-2" height="40" src="https://www.eb.mil.br/image/company_logo?img_id=40367&amp;t=1721965932372" width="40">
+                <div>
+                    <div class="text-sm text-green-800">Ministério da Defesa</div>
+                    <div class="font-bold text-green-800">Exército Brasileiro</div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <nav class="bg-gray-200 py-2 overflow-x-auto">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center text-sm whitespace-nowrap">
+                <a class="text-green-800 mr-2" href="#">Exército Brasileiro</a>
+                <span class="text-gray-500 mx-1">&gt;</span>
+                <a class="text-green-800 mr-2" href="#">Serviços</a>
+                <span class="text-gray-500 mx-1">&gt;</span>
+                <a class="text-green-800 mr-2" href="#">CAC</a>
+                <span class="text-gray-500 mx-1">&gt;</span>
+                <span class="text-gray-700">Teste Psicotécnico</span>
+            </div>
+        </div>
+    </nav>
+    <main class="container mx-auto px-4 py-8">
+        <h1 class="text-2xl font-bold mb-4">Teste Psicotécnico para Registro de CAC</h1>
+        <p class="mb-4">Este teste psicotécnico faz parte do processo de avaliação para obtenção do registro de Colecionador, Atirador e Caçador (CAC). Por favor, responda todas as perguntas com sinceridade. Suas respostas serão analisadas por profissionais qualificados.</p>
+        <form id="cac-questionario" class="space-y-6">
+            <div id="question-container" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+                <h2 class="text-xl font-semibold mb-4">1. Como você reage quando se sente frustrado ou irritado?</h2>
+                <div class="space-y-2">
+            
+                    <div class="flex items-center p-2 rounded hover:bg-gray-100">
+                        <input type="radio" id="q0_option0" name="q0" value="Tento me acalmar respirando fundo e contando até dez" class="radio-button hidden">
+                        <label for="q0_option0" class="flex items-center flex-grow ml-2 p-2 rounded cursor-pointer transition-colors duration-200">
+                            <div class="checkbox-custom"></div>
+                            Tento me acalmar respirando fundo e contando até dez
+                        </label>
+                    </div>
+                
+                    <div class="flex items-center p-2 rounded hover:bg-gray-100">
+                        <input type="radio" id="q0_option1" name="q0" value="Expresso minha raiva verbalmente, mas nunca fisicamente" class="radio-button hidden">
+                        <label for="q0_option1" class="flex items-center flex-grow ml-2 p-2 rounded cursor-pointer transition-colors duration-200">
+                            <div class="checkbox-custom"></div>
+                            Expresso minha raiva verbalmente, mas nunca fisicamente
+                        </label>
+                    </div>
+                
+                    <div class="flex items-center p-2 rounded hover:bg-gray-100">
+                        <input type="radio" id="q0_option2" name="q0" value="Às vezes tenho dificuldade em controlar minha raiva" class="radio-button hidden">
+                        <label for="q0_option2" class="flex items-center flex-grow ml-2 p-2 rounded cursor-pointer transition-colors duration-200">
+                            <div class="checkbox-custom"></div>
+                            Às vezes tenho dificuldade em controlar minha raiva
+                        </label>
+                    </div>
+                
+                    <div class="flex items-center p-2 rounded hover:bg-gray-100">
+                        <input type="radio" id="q0_option3" name="q0" value="Geralmente me isolo para evitar conflitos" class="radio-button hidden">
+                        <label for="q0_option3" class="flex items-center flex-grow ml-2 p-2 rounded cursor-pointer transition-colors duration-200">
+                            <div class="checkbox-custom"></div>
+                            Geralmente me isolo para evitar conflitos
+                        </label>
+                    </div>
+                </div></div>
+
+            <div class="flex items-center justify-between">
+                <button id="prev-button" class="bg-gray-500 hover:bg-gray-400 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button" style="display: none;">
+                    Anterior
+                </button>
+                <div class="flex-grow"></div>
+                <button id="next-button" class="bg-green-800 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline ml-auto" type="button" style="display: block;">
+                    Próxima
+                </button>
+                <button id="submit-button" class="bg-green-800 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline pulse ml-auto" type="button" style="display: none;" onclick="window.location.href='/pages/aprovado';">
+                    Enviar Teste
+                </button>
+            </div>
+        </form>
+    </main>
+    <footer class="bg-green-900 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4">
+                <div>
+                    <h3 class="font-bold mb-2">O EXÉRCITO</h3>
+                    <ul class="text-sm">
+                        <li><a class="hover:underline" href="#">Missão e Visão</a></li>
+                        <li><a class="hover:underline" href="#">Comandante do Exército</a></li>
+                        <li><a class="hover:underline" href="#">Organização</a></li>
+                        <li><a class="hover:underline" href="#">História</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-bold mb-2">SERVIÇOS</h3>
+                    <ul class="text-sm">
+                        <li><a class="hover:underline" href="#">CAC</a></li>
+                        <li><a class="hover:underline" href="#">Alistamento</a></li>
+                        <li><a class="hover:underline" href="#">Concursos</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-bold mb-2">TRANSPARÊNCIA</h3>
+                    <ul class="text-sm">
+                        <li><a class="hover:underline" href="#">Acesso �&nbsp; Informação</a></li>
+                        <li><a class="hover:underline" href="#">Licitações e Contratos</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-bold mb-2">CONTATO</h3>
+                    <ul class="text-sm">
+                        <li><a class="hover:underline" href="#">Ouvidoria</a></li>
+                        <li><a class="hover:underline" href="#">Fale Conosco</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-bold mb-2">REDES SOCIAIS</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-white hover:text-gray-300"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white hover:text-gray-300"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white hover:text-gray-300"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white hover:text-gray-300"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="bg-green-950 text-white text-xs py-2 text-center">
+        Portal produzido pelo Exército Brasileiro - Todos os Direitos Reservados.
+    </div>
+    <script>
+        const questions = [
+            {
+                question: "Como você reage quando se sente frustrado ou irritado?",
+                options: [
+                    "Tento me acalmar respirando fundo e contando até dez",
+                    "Expresso minha raiva verbalmente, mas nunca fisicamente",
+                    "Às vezes tenho dificuldade em controlar minha raiva",
+                    "Geralmente me isolo para evitar conflitos"
+                ]
+            },
+            {
+                question: "Como você lida com situações de alto estresse?",
+                options: [
+                    "Mantenho a calma e penso logicamente para resolver o problema",
+                    "Peço ajuda a outras pessoas quando me sinto sobrecarregado",
+                    "Às vezes me sinto paralisado e tenho dificuldade em agir",
+                    "Tento evitar situações estressantes sempre que possível"
+                ]
+            },
+            {
+                question: "Como você se sente em relação a seguir regras e regulamentos?",
+                options: [
+                    "Acredito que regras são importantes e sempre as sigo rigorosamente",
+                    "Geralmente sigo as regras, mas às vezes questiono sua necessidade",
+                    "Sigo as regras que fazem sentido para mim",
+                    "Tenho dificuldade em seguir regras que considero desnecessárias"
+                ]
+            },
+            {
+                question: "Como você lida com conflitos interpessoais?",
+                options: [
+                    "Procuro resolver pacificamente através do diálogo",
+                    "Evito conflitos sempre que possível",
+                    "Defendo meu ponto de vista firmemente, mesmo que leve a discussões",
+                    "Tento encontrar um meio-termo ou compromisso"
+                ]
+            },
+            {
+                question: "Como você reage quando comete um erro?",
+                options: [
+                    "Assumo a responsabilidade e tento corrigir o erro",
+                    "Fico frustrado comigo mesmo, mas tento aprender com a experiência",
+                    "Tento esconder ou minimizar o erro",
+                    "Culpo as circunstâncias ou outras pessoas"
+                ]
+            },
+            {
+                question: "Como você lida com críticas?",
+                options: [
+                    "Aceito críticas construtivas e as uso para melhorar",
+                    "Fico na defensiva inicialmente, mas depois reflito sobre elas",
+                    "Tenho dificuldade em aceitar críticas, mesmo que construtivas",
+                    "Ignoro a maioria das críticas"
+                ]
+            },
+            {
+                question: "Como você se sente em relação à responsabilidade de possuir uma arma?",
+                options: [
+                    "Entendo a grande responsabilidade e estou preparado para lidar com ela",
+                    "Me sinto um pouco ansioso, mas acredito que posso lidar com isso",
+                    "Estou confiante e não vejo problemas em ter essa responsabilidade",
+                    "Tenho algumas preocupações sobre a responsabilidade envolvida"
+                ]
+            },
+            {
+                question: "Como você lida com situações de perigo iminente?",
+                options: [
+                    "Mantenho a calma e avalio a situação antes de agir",
+                    "Reajo rapidamente para me proteger ou proteger outros",
+                    "Fico paralisado momentaneamente antes de reagir",
+                    "Tento evitar situações perigosas a todo custo"
+                ]
+            },
+            {
+                question: "Como você se sente em relação ao uso de força para autodefesa?",
+                options: [
+                    "Acredito que a força deve ser usada apenas como último recurso",
+                    "Me sinto preparado para usar força se necessário para me defender",
+                    "Prefiro evitar confrontos físicos a todo custo",
+                    "Acredito que a melhor defesa é um bom ataque"
+                ]
+            },
+            {
+                question: "Como você lida com a pressão de tomar decisões rápidas?",
+                options: [
+                    "Mantenho a calma e tomo decisões baseadas em análise rápida",
+                    "Confio nos meus instintos para tomar decisões rápidas",
+                    "Fico ansioso, mas tento fazer o melhor possível",
+                    "Prefiro ter tempo para pensar antes de tomar decisões importantes"
+                ]
+            }
+        ];
+
+        let currentQuestion = 0;
+        const questionContainer = document.getElementById('question-container');
+        const prevButton = document.getElementById('prev-button');
+        const nextButton = document.getElementById('next-button');
+        const submitButton = document.getElementById('submit-button');
+
+        function displayQuestion(index) {
+            const question = questions[index];
+            let html = `
+                <h2 class="text-xl font-semibold mb-4">${index + 1}. ${question.question}</h2>
+                <div class="space-y-2">
+            `;
+            question.options.forEach((option, i) => {
+                html += `
+                    <div class="flex items-center p-2 rounded hover:bg-gray-100">
+                        <input type="radio" id="q${index}_option${i}" name="q${index}" value="${option}" class="radio-button hidden">
+                        <label for="q${index}_option${i}" class="flex items-center flex-grow ml-2 p-2 rounded cursor-pointer transition-colors duration-200">
+                            <div class="checkbox-custom"></div>
+                            ${option}
+                        </label>
+                    </div>
+                `;
+            });
+            html += '</div>';
+            questionContainer.innerHTML = html;
+        }
+
+        function updateButtons() {
+            prevButton.style.display = currentQuestion > 0 ? 'block' : 'none';
+            if (currentQuestion === questions.length - 1) {
+                nextButton.style.display = 'none';
+                submitButton.style.display = 'block';
+            } else {
+                nextButton.style.display = 'block';
+                submitButton.style.display = 'none';
+            }
+        }
+
+        prevButton.addEventListener('click', () => {
+            if (currentQuestion > 0) {
+                currentQuestion--;
+                displayQuestion(currentQuestion);
+                updateButtons();
+            }
+        });
+
+        nextButton.addEventListener('click', () => {
+            const selectedOption = document.querySelector(`input[name="q${currentQuestion}"]:checked`);
+            if (selectedOption) {
+                if (currentQuestion < questions.length - 1) {
+                    currentQuestion++;
+                    displayQuestion(currentQuestion);
+                    updateButtons();
+                }
+            } else {
+                alert('Por favor, selecione uma opção antes de prosseguir.');
+            }
+        });
+
+        document.getElementById('cac-questionario').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const selectedOption = document.querySelector(`input[name="q${currentQuestion}"]:checked`);
+            if (selectedOption) {
+                alert('Teste psicotécnico enviado com sucesso! Suas respostas serão analisadas por profissionais qualificados e você será contatado em breve para os próximos passos do processo de registro CAC.');
+            } else {
+                alert('Por favor, responda todas as perguntas antes de enviar o teste.');
+            }
+        });
+
+        // Loading screen
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                document.getElementById('loading-screen').style.display = 'none';
+            }, 4000);
+        });
+
+        // Initialize the first question
+        displayQuestion(currentQuestion);
+        updateButtons();
+    </script>
+
+</body></html>

